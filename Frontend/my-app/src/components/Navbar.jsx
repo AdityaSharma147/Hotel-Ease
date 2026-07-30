@@ -26,22 +26,6 @@ export const Navbar = () => {
           </h1>
         </Link>
       </div>
-      <div className="absolute left-0 ml-2 ">
-        <ul className=" justify-start  text-[#ffffff] font-semibold inline-flex  gap-16 p-2 rounded-xl sm:hidden lg:flex ">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-        </ul>
-      </div>
 
       <button className="absolute bg-white right-4 rounded-md p-1 text-md text-[#C27E35] border-2 border-[#C27E35] hover:bg-[#1a1a2e] transition-colors font-semibold">
         <Link to="/login">Login</Link>
