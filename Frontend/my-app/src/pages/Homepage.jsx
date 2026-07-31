@@ -6,7 +6,7 @@ import Facilities from "../components/Facilities.jsx";
 
 const Homepage = () => {
   return (
-    <div className="absolute top-0">
+    <div className="w-full">
       <Hero />
       <Bookingbar />
       <HotelList />
