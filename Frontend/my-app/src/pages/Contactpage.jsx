@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Footer } from "../components/Footer";
 import BGImg from "../assets/Luxury.jpg";
 
 const Contactpage = () => {
@@ -91,6 +92,7 @@ const Contactpage = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

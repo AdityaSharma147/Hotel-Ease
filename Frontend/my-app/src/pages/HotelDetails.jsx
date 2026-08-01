@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 // import { roomData } from "../assets/asset";
 import { useParams } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import HotelList from "../components/HotelList";
 import { RoomContext } from "../context/RoomContext";
 import { backendUrl } from "../App";
@@ -181,6 +182,7 @@ const HotelDetails = () => {
       <div>
         <HotelList />
       </div>
+      <Footer />
     </div>
   );
 };
