@@ -5,6 +5,7 @@ import HomePage from "./pages/Homepage";
 import { Navbar } from "./components/Navbar";
 import Serviciespage from "./pages/Serviciespage";
 import Aboutpage from "./pages/Aboutpage";
+import Contactpage from "./pages/Contactpage.jsx";
 
 import Loginpage from "./pages/Loginpage";
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<Aboutpage />} />
+        <Route path="/contact" element={<Contactpage />} />
         <Route path="/services" element={<Serviciespage />} />
         <Route path="/room/:id" element={<HotelDetail />} />
         <Route path="/login" element={<Loginpage />} />
