@@ -1,10 +1,16 @@
 import React from "react";
 import { Footer } from "./Footer";
+import BGImg from "../assets/Luxury.jpg";
 
 const Login = () => {
   return (
     <div>
       <div className="flex text-black justify-center items-center min-h-screen">
+        <img
+          src={BGImg}
+          alt="Hotel Ease luxury background"
+          className="absolute inset-0 w-full h-full object-cover -z-10"
+        />
         <div className="bg-linear-to-br bg-amber-200 shadow-md rounded-lg px-8 py-6 w-full max-w-md">
           <h1 className="text-2xl font-bold text-bold text-center  mb-4">
             Login
