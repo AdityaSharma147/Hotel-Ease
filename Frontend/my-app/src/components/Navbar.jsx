@@ -30,8 +30,8 @@ export const Navbar = () => {
       </button>
 
       {menuOpen && (
-        <div className="fixed top-16 left-0 right-0 bottom-0 z-40 lg:hidden ">
-          <nav className="flex flex-col items-center gap-6 pt-10">
+        <div className="fixed top-16 left-0 right-0 bottom-0 z-40 lg:hidden   ">
+          <nav className="flex flex-col items-center gap-6 pt-10  bg-black/70 ">
             <Link
               className="text-white text-lg border-b w-full text-center pb-2"
               to="/"
