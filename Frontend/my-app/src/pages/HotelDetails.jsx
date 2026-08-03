@@ -7,7 +7,6 @@ import {
   FaSwimmingPool,
   FaConciergeBell,
 } from "react-icons/fa";
-// import { roomData } from "../assets/asset";
 import { useParams } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import HotelList from "../components/HotelList";
@@ -49,6 +48,7 @@ const HotelDetails = () => {
       fetchRoomDetails();
     }
   }, [id]);
+
   if (loading) {
     return <div className="text-center p-8">Loading room details...</div>;
   }
@@ -63,25 +63,29 @@ const HotelDetails = () => {
 
   return (
     <div>
-      <div className=" mx-4 mt-18 max-7xl grid grid-cols-2 gap-8 p-6 bg-amber-200  rounded-xl ">
-        {/*  Left side */}
-        <div className=" md:col-span-1 space-y-6">
+      <div className="mx-4 mt-18 max-w-7xl lg:mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-8 p-4 sm:p-6 lg:p-6 bg-amber-200 rounded-xl">
+        {/* Left side */}
+        <div className="lg:col-span-1 space-y-6">
           <div>
             <div>
               <img
                 src={room.image}
                 alt={room.name}
-                className="w-full rounded-lg shadow-md"
+                className="w-full h-64 sm:h-80 lg:h-auto object-cover rounded-lg shadow-md"
               />
-              <h1 className="text-3xl font-bold">{room.name}</h1>
-              <p>{room.description}</p>
-              <p className="text-xl text-green-500 mt-1">₹{room.price}</p>
+              <h1 className="text-2xl sm:text-3xl lg:text-3xl font-bold mt-3">
+                {room.name}
+              </h1>
+              <p className="text-sm sm:text-base">{room.description}</p>
+              <p className="text-lg sm:text-xl text-green-500 mt-1">
+                ₹{room.price}
+              </p>
             </div>
           </div>
 
           <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-3">Amenities</h2>
-            <div className="grid grid-cols-2 gap-4 text-gray-700">
+            <h2 className="text-lg sm:text-xl font-semibold mb-3">Amenities</h2>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base text-gray-700">
               <div className="flex items-center gap-2">
                 <FaWifi /> Wi-Fi
               </div>
@@ -100,86 +104,82 @@ const HotelDetails = () => {
                 <FaConciergeBell /> Room Service
               </div>
             </div>
-            <div></div>
           </div>
         </div>
+
         {/* Right side */}
-        <div className="bg-white p-6 mt-18 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold mb-4">Book Your Stay</h2>
+        <div className="bg-white p-4 sm:p-6 mt-6 lg:mt-18 rounded-lg shadow-md h-fit">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Book Your Stay</h2>
           <form className="space-y-4">
             <input
               type="text"
               name=""
               id="806"
               placeholder="Name"
-              className="w-full border border-b-gray-300 p-3 rounded-lg"
+              className="w-full border border-b-gray-300 p-3 rounded-lg text-sm sm:text-base"
             />
             <input
               type="email"
               name=""
               id="805"
               placeholder="Email"
-              className="w-full border border-b-gray-300 p-3 rounded-lg"
+              className="w-full border border-b-gray-300 p-3 rounded-lg text-sm sm:text-base"
             />
             <input
               type="tel"
               name=""
               id="804"
               placeholder="Phone Number"
-              className="w-full border border-b-gray-300 p-3 rounded-lg"
+              className="w-full border border-b-gray-300 p-3 rounded-lg text-sm sm:text-base"
             />
             <div>
-              <label htmlFor="803" className="font-bold">
+              <label htmlFor="803" className="font-bold text-sm sm:text-base">
                 Check-In
               </label>
               <input
                 type="date"
                 name=""
                 id="803"
-                className="w-full border border-b-gray-300 p-3 rounded-lg"
+                className="w-full border border-b-gray-300 p-3 rounded-lg text-sm sm:text-base"
               />
             </div>
             <div>
-              <label htmlFor="802" className="font-bold">
+              <label htmlFor="802" className="font-bold text-sm sm:text-base">
                 Check-Out
               </label>
               <input
                 type="date"
                 name=""
                 id="802"
-                className="w-full border border-b-gray-300 p-3 rounded-lg"
+                className="w-full border border-b-gray-300 p-3 rounded-lg text-sm sm:text-base"
               />
             </div>
             <div>
-              <label htmlFor="801" className="font-bold">
+              <label htmlFor="801" className="font-bold text-sm sm:text-base">
                 Number of Guests
               </label>
               <select
                 name=""
                 id="801"
-                className="w-full p-3 mb-3 border rounded-lg focus:ring focus:ring-blue-300"
+                className="w-full p-3 mb-3 border rounded-lg focus:ring focus:ring-blue-300 text-sm sm:text-base"
               >
-                {[
-                  ...Array(3)
-                    .keys()
-                    .map((i) => (
-                      <option key={i + 1} value={i + 1}>
-                        {i + 1} Guest(s)
-                      </option>
-                    )),
-                ]}
+                {[1, 2, 3].map((i) => (
+                  <option key={i} value={i}>
+                    {i} Guest(s)
+                  </option>
+                ))}
               </select>
             </div>
             <button
               type="submit"
-              className="w-full bg-amber-400 text-white p-3 rounded-lg hover:bg-amber-950 transition-none"
+              className="w-full bg-amber-400 text-white p-3 rounded-lg hover:bg-amber-950 transition-colors font-semibold"
             >
               Book Now
             </button>
           </form>
         </div>
       </div>
-      <div>
+      <div className="mt-12">
         <HotelList />
       </div>
       <Footer />
