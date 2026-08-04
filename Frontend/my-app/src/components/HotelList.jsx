@@ -1,10 +1,7 @@
 import React from "react";
 import { RoomContext } from "../context/RoomContext";
 import { Link } from "react-router-dom";
-import { FaBath } from "react-icons/fa";
-import { FaUserFriends } from "react-icons/fa";
-import { FaBed } from "react-icons/fa";
-import { FaWifi } from "react-icons/fa";
+import { FaBath, FaUserFriends, FaBed, FaWifi } from "react-icons/fa";
 
 const amenitiesList = [
   { label: "1-2 persons", icon: <FaUserFriends /> },
@@ -13,8 +10,10 @@ const amenitiesList = [
   { label: "Free wifi", icon: <FaWifi /> },
 ];
 
-const HotelList = () => {
+const HotelList = ({ limit }) => {
   const { rooms } = React.useContext(RoomContext);
+
+  const displayedRooms = limit ? rooms.slice(0, limit) : rooms;
 
   return (
     <div className="bg-[#f7f0eb] py-12 sm:py-16 px-4">
@@ -25,8 +24,8 @@ const HotelList = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-          {rooms && rooms.length > 0 ? (
-            rooms.map((room, index) => {
+          {displayedRooms && displayedRooms.length > 0 ? (
+            displayedRooms.map((room, index) => {
               const { image, name, price, description } = room;
               return (
                 <div
@@ -68,6 +67,17 @@ const HotelList = () => {
             </p>
           )}
         </div>
+
+        {limit && rooms.length > limit && (
+          <div className="flex justify-center mt-10">
+            <Link
+              to="/rooms"
+              className="bg-[#C27E35] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#1a1a2e] transition-colors"
+            >
+              View All Rooms
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

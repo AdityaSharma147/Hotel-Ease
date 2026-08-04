@@ -9,7 +9,7 @@ const Homepage = () => {
     <div className="w-full">
       <Hero />
       <Bookingbar />
-      <HotelList />
+      <HotelList limit={6} />
       <Facilities />
       <Footer />
     </div>
