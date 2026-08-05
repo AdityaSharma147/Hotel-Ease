@@ -180,7 +180,7 @@ const HotelDetails = () => {
         </div>
       </div>
       <div className="mt-12">
-        <HotelList />
+        <HotelList limit={6} />
       </div>
       <Footer />
     </div>
