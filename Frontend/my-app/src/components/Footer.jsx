@@ -1,4 +1,5 @@
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -23,9 +24,11 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center text-center gap-4 border border-[#C27E35]/40 m-4 p-4 rounded-lg">
-          <h1 className="text-xl sm:text-2xl font-bold">
-            ℌ𝔬𝔱𝔢𝔩<span className="text-[#C27E35]">𝔈𝔞𝔰𝔢</span>
-          </h1>
+          <Link to="/">
+            <h1 className="text-xl sm:text-2xl font-bold">
+              ℌ𝔬𝔱𝔢𝔩<span className="text-[#C27E35]">𝔈𝔞𝔰𝔢</span>
+            </h1>
+          </Link>
 
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-24 py-4">
             <ul className="flex flex-col gap-2">
@@ -53,17 +56,37 @@ export const Footer = () => {
             </ul>
 
             <ul className="flex flex-col gap-2 text-base font-medium">
-              <li className="cursor-pointer hover:text-[#E8B86D] transition-colors">
-                HOME
+              <li>
+                <Link
+                  to="/"
+                  className="cursor-pointer hover:text-[#E8B86D] transition-colors"
+                >
+                  HOME
+                </Link>
               </li>
-              <li className="cursor-pointer hover:text-[#E8B86D] transition-colors">
-                BOOKINGS
+              <li>
+                <Link
+                  to="/about"
+                  className="cursor-pointer hover:text-[#E8B86D] transition-colors"
+                >
+                  ABOUT
+                </Link>
               </li>
-              <li className="cursor-pointer hover:text-[#E8B86D] transition-colors">
-                ROOMS
+              <li>
+                <Link
+                  to="/rooms"
+                  className="cursor-pointer hover:text-[#E8B86D] transition-colors"
+                >
+                  ROOMS
+                </Link>
               </li>
-              <li className="cursor-pointer hover:text-[#E8B86D] transition-colors">
-                CONTACT
+              <li>
+                <Link
+                  to="/contact"
+                  className="cursor-pointer hover:text-[#E8B86D] transition-colors"
+                >
+                  CONTACT
+                </Link>
               </li>
             </ul>
           </div>
