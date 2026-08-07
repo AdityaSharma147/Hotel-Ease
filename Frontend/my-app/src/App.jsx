@@ -8,6 +8,7 @@ import Aboutpage from "./pages/Aboutpage";
 import Contactpage from "./pages/Contactpage.jsx";
 import AllRooms from "./pages/AllRooms.jsx";
 import Loginpage from "./pages/Loginpage";
+import SignupPage from "./pages/SignupPage.jsx";
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/rooms" element={<AllRooms />} />
         <Route path="/room/:id" element={<HotelDetail />} />
         <Route path="/login" element={<Loginpage />} />
+        <Route path="/Signup" element={<SignupPage />} />
       </Routes>
     </div>
   );
