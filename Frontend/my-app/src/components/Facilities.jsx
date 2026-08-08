@@ -93,14 +93,13 @@ const Facilities = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {selectedService && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
           onClick={() => setSelectedService(null)}
         >
           <div
-            className="bg-white rounded-2xl max-w-lg w-full p-8 relative animate-fadeIn"
+            className="bg-[#f8f0eb]  rounded-2xl max-w-lg w-full p-8 relative animate-fadeIn"
             onClick={(e) => e.stopPropagation()}
           >
             <button
