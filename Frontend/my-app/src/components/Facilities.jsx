@@ -66,7 +66,7 @@ const Facilities = () => {
   return (
     <div className="bg-[#f8f0eb] py-16 px-4 md:px-20 sm:left-25">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12">
+        <div className="mb-12 bg-[#EEB76B] p-3 w-85 border-2  rounded border-amber-900 ">
           <p className="text-sm tracking-widest uppercase text-gray-500">
             Services
           </p>
