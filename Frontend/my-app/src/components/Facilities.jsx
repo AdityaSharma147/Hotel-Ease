@@ -116,7 +116,7 @@ const Facilities = () => {
               <h3 className="text-3xl font-serif text-gray-800">
                 {selectedService.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-500 leading-relaxed">
                 {selectedService.details}
               </p>
             </div>
