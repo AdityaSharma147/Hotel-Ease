@@ -72,7 +72,7 @@ const HotelList = ({ limit }) => {
           <div className="flex justify-center mt-10">
             <Link
               to="/rooms"
-              className="bg-[#C27E35] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#1a1a2e] transition-colors"
+              className="bg-[#C27E35] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#1a1a2e] transition-colors border-2"
             >
               View All Rooms
             </Link>
