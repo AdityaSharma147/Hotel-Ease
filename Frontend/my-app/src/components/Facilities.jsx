@@ -113,7 +113,7 @@ const Facilities = () => {
               <div className="bg-[#EEB76B] rounded-full p-6 text-[#1a1a2e]">
                 {selectedService.bigIcon}
               </div>
-              <h3 className="text-3xl font-serif text-gray-800">
+              <h3 className="text-3xl font-serif text-gray-700">
                 {selectedService.title}
               </h3>
               <p className="text-gray-500 leading-relaxed">
