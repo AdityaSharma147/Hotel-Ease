@@ -3,6 +3,7 @@ import { Footer } from "../components/Footer.jsx";
 import { Hero } from "../components/Hero.jsx";
 import { Bookingbar } from "../components/Searchbar.jsx";
 import Facilities from "../components/Facilities.jsx";
+import About from "../components/About";
 
 const Homepage = () => {
   return (
@@ -11,6 +12,7 @@ const Homepage = () => {
       <Bookingbar />
       <HotelList limit={6} />
       <Facilities />
+      <About />
       <Footer />
     </div>
   );
