@@ -85,7 +85,7 @@ const Contactpage = () => {
             />
             <button
               type="submit"
-              className="bg-[#C27E35] text-white font-semibold py-3 rounded-md hover:bg-[#1a1a2e] transition-colors"
+              className="bg-[#C27E35] text-[#f7f0eb] font-semibold py-3 rounded-md hover:bg-[#1a1a2e] transition-colors"
             >
               Send Message
             </button>
