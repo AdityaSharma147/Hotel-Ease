@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <div className="w-full bg-linear-to-br from-[#1a1a2e] via-[#2b2420] to-[#C27E35] text-white text-center p-4 sm:p-6">
+    <div className="w-full bg-linear-to-br from-[#202046] via-[#2b2420] to-[#C27E35] text-white text-center p-4 sm:p-6">
       <div className="flex flex-col gap-4">
         {/* Top section */}
         <div className="grid place-content-center gap-4 text-center px-4">
