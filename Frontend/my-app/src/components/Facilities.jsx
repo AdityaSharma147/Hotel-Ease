@@ -74,7 +74,7 @@ const Facilities = () => {
             Facilties & Services
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 border-2 border-amber-900 rounded-xl p-4 gap-10">
           {services.map((service, index) => (
             <button
               key={index}
