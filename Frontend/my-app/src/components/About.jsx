@@ -90,7 +90,7 @@ const About = () => {
 
           <Link
             to="/rooms"
-            className="inline-block mt-8 bg-amber-500 hover:bg-amber-600 text-black px-8 py-3 rounded-full font-semibold transition duration-300"
+            className="inline-block mt-8 bg-amber-400 hover:bg-amber-500 text-black px-8 py-3 rounded-full font-semibold transition duration-300"
           >
             Explore Rooms
           </Link>
